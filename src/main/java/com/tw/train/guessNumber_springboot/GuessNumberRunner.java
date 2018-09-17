@@ -1,5 +1,7 @@
 package com.tw.train.guessNumber_springboot;
 
+import com.google.common.base.Strings;
+import com.google.common.io.LineReader;
 import org.springframework.beans.BeansException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.ApplicationArguments;
@@ -8,8 +10,12 @@ import org.springframework.context.ApplicationContext;
 import org.springframework.context.ApplicationContextAware;
 import org.springframework.stereotype.Component;
 
+import java.io.InputStreamReader;
+
+
 @Component
 public class GuessNumberRunner implements ApplicationRunner, ApplicationContextAware {
+
     @Autowired
     private GuessNumberGame guessNumberGame;
 

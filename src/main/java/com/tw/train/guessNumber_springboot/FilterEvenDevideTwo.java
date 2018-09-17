@@ -1,9 +1,12 @@
 package com.tw.train.guessNumber_springboot;
 
+import org.springframework.stereotype.Component;
+
 import java.util.List;
 import java.util.stream.Collectors;
 
-public class FilterThree implements ProcessRule {
+@Component
+public class FilterEvenDevideTwo implements ProcessRule {
 
     public List<String> processNumbers(List<String> input){
         List<String> processNumber = input.stream().map(s -> Integer.parseInt(s))
