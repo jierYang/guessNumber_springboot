@@ -16,7 +16,6 @@ public class GuessNumberRunner implements ApplicationRunner, ApplicationContextA
     @Override
     public void run(ApplicationArguments args) {
         System.out.println(guessNumberGame.process("1 2 3 4 5"));
-        guessNumberGame.process("1 2 3 4 5");
     }
 
     @Override

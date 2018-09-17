@@ -7,7 +7,7 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 @Component
-public class filterEvenAddone implements ProcessRule {
+public class FilterEvenAddone implements ProcessRule {
 
     public List<String> processNumbers(List<String> input){
         List<String> processNumber = input.stream().map(s -> Integer.parseInt(s))
