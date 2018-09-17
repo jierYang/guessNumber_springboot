@@ -1,8 +1,12 @@
 package com.tw.train.guessNumber_springboot;
 
+import org.springframework.context.annotation.Profile;
+import org.springframework.stereotype.Component;
+
 import java.util.List;
 import java.util.stream.Collectors;
 
+@Component
 public class filterEvenAddone implements ProcessRule {
 
     public List<String> processNumbers(List<String> input){
