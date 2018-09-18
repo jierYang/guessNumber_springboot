@@ -2,7 +2,6 @@ package com.tw.train.guessNumber_springboot;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.ActiveProfiles;
@@ -13,17 +12,11 @@ import static org.assertj.core.api.Java6Assertions.assertThat;
 
 @SpringBootTest
 @RunWith(SpringRunner.class)
-@ActiveProfiles(value = "Odd")
-public class GuessNumberGameTest {
+@ActiveProfiles(value = "EvenDevideTwo")
+public class GuessNumberGameTestEvenDivideTwo {
     @Autowired
     private GuessNumberGame guessNumberGame;
 
-    @Test
-    public void shouldRunTestOdd(){
-        String result = guessNumberGame.process("1 2 3 4 5");
-        assertThat(result).isEqualTo("1 3 5");
-//        Assert.assertThat(result,is("1 2\\n1 3 5\\n3 5 7\\n3 7 11\\n"));
-    }
 
     @Test
     public void shouldRunTestEvenDevideTwo(){
@@ -31,15 +24,4 @@ public class GuessNumberGameTest {
         assertThat(result).isEqualTo("1 2");
     }
 
-    @Test
-    public void shouldRunTestoddAddOne(){
-        String result = guessNumberGame.process("1 2 3 4 5");
-        assertThat(result).isEqualTo("3 5 7");
-    }
-
-    @Test
-    public void shouldRunTestOddAddTwo(){
-        String result = guessNumberGame.process("1 2 3 4 5");
-        assertThat(result).isEqualTo("3 7 11");
-    }
 }
