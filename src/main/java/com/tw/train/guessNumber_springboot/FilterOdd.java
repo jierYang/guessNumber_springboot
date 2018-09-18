@@ -1,10 +1,12 @@
 package com.tw.train.guessNumber_springboot;
 
+import org.springframework.context.annotation.Profile;
 import org.springframework.stereotype.Component;
 
 import java.util.List;
 import java.util.stream.Collectors;
 
+@Profile(value = "Odd")
 @Component
 public class FilterOdd implements ProcessRule {
 

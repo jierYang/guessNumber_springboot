@@ -25,7 +25,7 @@ public class GuessNumberGame {
 
 
         for(ProcessRule rule:this.rules){
-            result += String.join(" ",rule.processNumbers(numbers))+"\n";
+            result = String.join(" ",rule.processNumbers(numbers));
         }
 //        return String.join(" ", result);
         return  result;
